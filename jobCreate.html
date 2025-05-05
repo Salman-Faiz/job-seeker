@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Job</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .gradient-banner {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%);
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <div class="flex">
+    <!-- Sidebar would be here -->
+    
+    <!-- Main Content -->
+    <div class="flex-1 ml-64">
+      <!-- Unique Banner Section -->
+      <div class="gradient-banner text-white p-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+          <div class="mb-4 md:mb-0">
+            <h1 class="text-2xl md:text-3xl font-bold mb-2">Create New Job Posting</h1>
+            <p class="opacity-90">Fill out the form below to list your job opportunity</p>
+          </div>
+          <div class="flex items-center space-x-3">
+            <div class="bg-white bg-opacity-20 p-3 rounded-full">
+              <i class="fas fa-briefcase text-xl"></i>
+            </div>
+            <div>
+              <p class="text-xs opacity-80">STEP 1 OF 3</p>
+              <p class="font-medium">Job Details</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Container -->
+      <div class="p-8">
+        <div class="bg-white shadow rounded-lg overflow-hidden">
+          <!-- Progress Bar -->
+          <div class="h-2 bg-gray-200">
+            <div class="h-full bg-blue-600" style="width: 33%"></div>
+          </div>
+
+          <!-- Form Content -->
+          <div class="p-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Left Column -->
+              <div class="space-y-6">
+                <!-- Job Title -->
+                <div>
+                  <label for="job-title" class="block text-sm font-medium text-gray-700 mb-1">Job Title *</label>
+                  <input type="text" id="job-title" class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., Senior Frontend Developer">
+                </div>
+
+                <!-- Job Type -->
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">Job Type *</label>
+                  <div class="grid grid-cols-2 gap-3">
+                    <label class="inline-flex items-center border border-gray-200 rounded-lg p-3 hover:border-blue-400">
+                      <input type="radio" name="job-type" class="h-4 w-4 text-blue-600 focus:ring-blue-500" checked>
+                      <div class="ml-2">
+                        <span class="block text-sm font-medium text-gray-700">Full-time</span>
+                        <span class="block text-xs text-gray-500">Permanent employment</span>
+                      </div>
+                    </label>
+                    <label class="inline-flex items-center border border-gray-200 rounded-lg p-3 hover:border-blue-400">
+                      <input type="radio" name="job-type" class="h-4 w-4 text-blue-600 focus:ring-blue-500">
+                      <div class="ml-2">
+                        <span class="block text-sm font-medium text-gray-700">Part-time</span>
+                        <span class="block text-xs text-gray-500">Flexible hours</span>
+                      </div>
+                    </label>
+                    <label class="inline-flex items-center border border-gray-200 rounded-lg p-3 hover:border-blue-400">
+                      <input type="radio" name="job-type" class="h-4 w-4 text-blue-600 focus:ring-blue-500">
+                      <div class="ml-2">
+                        <span class="block text-sm font-medium text-gray-700">Contract</span>
+                        <span class="block text-xs text-gray-500">Temporary position</span>
+                      </div>
+                    </label>
+                    <label class="inline-flex items-center border border-gray-200 rounded-lg p-3 hover:border-blue-400">
+                      <input type="radio" name="job-type" class="h-4 w-4 text-blue-600 focus:ring-blue-500">
+                      <div class="ml-2">
+                        <span class="block text-sm font-medium text-gray-700">Remote</span>
+                        <span class="block text-xs text-gray-500">Work from anywhere</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Location -->
+                <div>
+                  <label for="location" class="block text-sm font-medium text-gray-700 mb-1">Location *</label>
+                  <div class="flex">
+                    <input type="text" id="location" class="flex-1 rounded-l-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="City, Country">
+                    <button class="bg-gray-100 border border-l-0 border-gray-300 rounded-r-lg px-3 hover:bg-gray-200">
+                      <i class="fas fa-map-marker-alt text-gray-500"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Salary Range -->
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">Salary Range</label>
+                  <div class="grid grid-cols-2 gap-3">
+                    <div>
+                      <label for="min-salary" class="block text-xs text-gray-500 mb-1">Minimum</label>
+                      <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                          <span class="text-gray-500">$</span>
+                        </div>
+                        <input type="number" id="min-salary" class="pl-7 w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., 50000">
+                      </div>
+                    </div>
+                    <div>
+                      <label for="max-salary" class="block text-xs text-gray-500 mb-1">Maximum</label>
+                      <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                          <span class="text-gray-500">$</span>
+                        </div>
+                        <input type="number" id="max-salary" class="pl-7 w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., 80000">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <label class="inline-flex items-center">
+                      <input type="checkbox" class="h-4 w-4 text-blue-600 rounded focus:ring-blue-500">
+                      <span class="ml-2 text-sm text-gray-700">Show salary range publicly</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column -->
+              <div class="space-y-6">
+                <!-- Department -->
+                <div>
+                  <label for="department" class="block text-sm font-medium text-gray-700 mb-1">Department</label>
+                  <select id="department" class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="">Select department</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="sales">Sales</option>
+                    <option value="hr">Human Resources</option>
+                    <option value="design">Design</option>
+                  </select>
+                </div>
+
+                <!-- Experience Level -->
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">Experience Level *</label>
+                  <div class="grid grid-cols-3 gap-2">
+                    <label class="inline-flex items-center justify-center border border-gray-200 rounded-lg p-2 hover:border-blue-400">
+                      <input type="radio" name="experience" class="h-4 w-4 text-blue-600 focus:ring-blue-500">
+                      <span class="ml-2 text-sm text-gray-700">Entry</span>
+                    </label>
+                    <label class="inline-flex items-center justify-center border border-gray-200 rounded-lg p-2 hover:border-blue-400">
+                      <input type="radio" name="experience" class="h-4 w-4 text-blue-600 focus:ring-blue-500" checked>
+                      <span class="ml-2 text-sm text-gray-700">Mid</span>
+                    </label>
+                    <label class="inline-flex items-center justify-center border border-gray-200 rounded-lg p-2 hover:border-blue-400">
+                      <input type="radio" name="experience" class="h-4 w-4 text-blue-600 focus:ring-blue-500">
+                      <span class="ml-2 text-sm text-gray-700">Senior</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Education Requirement -->
+                <div>
+                  <label for="education" class="block text-sm font-medium text-gray-700 mb-1">Education Requirement</label>
+                  <select id="education" class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="">No requirement</option>
+                    <option value="high-school">High School Diploma</option>
+                    <option value="associate">Associate Degree</option>
+                    <option value="bachelor">Bachelor's Degree</option>
+                    <option value="master">Master's Degree</option>
+                    <option value="phd">PhD</option>
+                  </select>
+                </div>
+
+                <!-- Skills -->
+                <div>
+                  <label for="skills" class="block text-sm font-medium text-gray-700 mb-1">Required Skills</label>
+                  <div class="flex flex-wrap gap-2 mb-2" id="selected-skills">
+                    <!-- Selected skills will appear here -->
+                  </div>
+                  <div class="relative">
+                    <input type="text" id="skills-input" class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Add skills...">
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                      <i class="fas fa-plus text-gray-400"></i>
+                    </div>
+                  </div>
+                  <div class="mt-1 text-xs text-gray-500">Press enter to add a skill</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Job Description -->
+            <div class="mt-6">
+              <label for="job-description" class="block text-sm font-medium text-gray-700 mb-1">Job Description *</label>
+              <div class="border border-gray-300 rounded-lg">
+                <div class="border-b border-gray-300 bg-gray-50 px-4 py-2 flex space-x-2">
+                  <button type="button" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-bold"></i>
+                  </button>
+                  <button type="button" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-italic"></i>
+                  </button>
+                  <button type="button" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-list-ul"></i>
+                  </button>
+                  <button type="button" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-link"></i>
+                  </button>
+                </div>
+                <textarea id="job-description" rows="8" class="w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Describe the responsibilities, requirements, and benefits of this position..."></textarea>
+              </div>
+            </div>
+
+            <!-- Application Options -->
+            <div class="mt-6 border-t border-gray-200 pt-6">
+              <h3 class="text-lg font-medium text-gray-800 mb-4">Application Options</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="application-email" class="block text-sm font-medium text-gray-700 mb-1">Application Email</label>
+                  <input type="email" id="application-email" class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="careers@yourcompany.com">
+                </div>
+                <div>
+                  <label for="application-url" class="block text-sm font-medium text-gray-700 mb-1">Application URL</label>
+                  <input type="url" id="application-url" class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="https://yourcompany.com/apply">
+                </div>
+              </div>
+              <div class="mt-4">
+                <label class="inline-flex items-center">
+                  <input type="checkbox" class="h-4 w-4 text-blue-600 rounded focus:ring-blue-500" checked>
+                  <span class="ml-2 text-sm text-gray-700">Accept applications through this platform</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="mt-8 flex justify-between">
+              <button type="button" class="text-gray-600 hover:text-gray-800 flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> Back
+              </button>
+              <div class="space-x-3">
+                <button type="button" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded-lg">
+                  Save Draft
+                </button>
+                <button type="button" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg">
+                  Preview & Publish
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simple script for skills input
+    document.getElementById('skills-input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const skill = this.value.trim();
+        if (skill) {
+          const skillTag = document.createElement('div');
+          skillTag.className = 'bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full flex items-center';
+          skillTag.innerHTML = `
+            ${skill}
+            <button class="ml-1 text-blue-500 hover:text-blue-700" onclick="this.parentElement.remove()">
+              <i class="fas fa-times text-xs"></i>
+            </button>
+          `;
+          document.getElementById('selected-skills').appendChild(skillTag);
+          this.value = '';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
